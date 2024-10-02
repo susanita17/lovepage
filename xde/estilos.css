@@ -1,0 +1,54 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambia la fuente a Comic Sans */
+    font-weight: bold; /* Establece el texto en negrita */
+    margin: 0;
+    padding: 20px;
+    background-color: pink; /* Color de fondo rosa */
+}
+
+header {
+    background: none; /* Elimina cualquier fondo */
+    color: #333; /* Cambia el color del texto si lo deseas */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.heart {
+    color: red; /* Color rojo */
+    transition: color 0.3s; /* Transición suave */
+    font-size: 200px; /* Tamaño del corazón */
+    display: block; /* Hace que el corazón ocupe una línea completa */
+    margin-top: 5px; /* Espacio entre el texto y el corazón */
+}
+
+.heart:hover {
+    color: lightcoral; /* Color rojo más claro al pasar el mouse */
+}
+
+.question {
+    color: violet; /* Color violeta */
+    font-size: 98px; /* Tamaño del texto */
+    margin-top: 10px; /* Espacio entre el corazón y el texto */
+}
+
+.option-button {
+    background-color: lightcoral; /* Color de fondo rojo claro */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 8px; /* Margen entre botones */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.option-button:hover {
+    background-color: coral; /* Color más oscuro al pasar el mouse */
+}
+
+
+.question {
+    color: violet; /* Color violeta */
+    font-size: 28px; /* Tamaño del texto */
+    margin-top: 10px; /* Espacio entre el corazón y el texto */
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️</title>
+    <link rel="stylesheet" href="estilos.css">
+
+
+</head>
+<body>
+    <header>
+    <h1 align="center">PARA TI<3</h1>
+    <span class="heart">❤️</span> <!-- Corazón debajo del texto -->
+    <p class="question">Me quieres?:<</p> <!-- Nuevo texto agregado -->
+    <button class="option-button">Sí</button> <!-- Botón Sí -->
+    <button class="option-button">No</button> <!-- Botón No -->
+</header>
+
+<script>
+    let noClickCount = 0; // Contador de clics en "No"
+
+    document.querySelector('.option-button:nth-of-type(1)').addEventListener('click', function() {
+        // Borra ambos botones
+        const buttons = document.querySelectorAll('.option-button');
+        buttons.forEach(button => button.remove());
+
+        // Muestra el texto "Yo masss"
+        const message = document.createElement('h1');
+        message.style.color = 'red'; // Color rojo
+        message.style.fontSize = '70px'; // Tamaño 70px
+        message.style.textAlign = 'center'; // Centrado
+        message.textContent = 'Yo masss';
+        document.body.appendChild(message);
+
+        // Cambia el texto después de 7 segundos
+        setTimeout(() => {
+            message.textContent = 'Te has ganado un chocolate';
+            // Borra todo el contenido y muestra la imagen
+            setTimeout(() => {
+                document.body.innerHTML = '<img src="Patu.jpeg" alt="Chocolate" style="width: 45%; height: 100%; object-fit: cover;">';
+            }, 4000); // Espera 1 segundo antes de mostrar la imagen
+        }, 3000);
+    });
+
+    document.querySelector('.option-button:nth-of-type(2)').addEventListener('click', function() {
+        noClickCount++; // Incrementa el contador al hacer clic en "No"
+        this.style.fontSize = '8px'; // Tamaño más pequeño para el botón "No"
+        this.style.padding = '5px 10px'; // Reduce el espaciado
+
+        if (noClickCount >= 3) { // Si el usuario hace clic 3 veces en "No"
+            document.body.innerHTML = '<h1 style="font-size: 90px; text-align: center;">OK... entiendo:(</h1>'; // Borra el contenido y muestra el nuevo texto
+        }
+    });
+</script>
+
+</body>
+</html>
